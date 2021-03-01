@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 class Event:
     def __init__(self):
+        self.request = request
         self.body = request.get_data()
         self.headers = request.headers
         self.method = request.method
